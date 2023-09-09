@@ -246,15 +246,17 @@ header .main-menu {
 }
 
 header .main-menu .item .item__name {
-    padding: 10px 50px 34px 20px;
+    padding: 20px 25px;
     font-family: Arial, sans-serif;
     font-size: 18px;
+    text-align: center;
 }
 
 header .main-menu .item:hover .item__name {
     background-color: #2C2A29;
-    color: #669900;
+    color: white;
     border-radius: 6px 6px 0 0;
+    transition: all .3s;
 }
 
 header .main-menu .item .item__contents {
@@ -266,10 +268,12 @@ header .main-menu .item .item__contents {
 
 header .main-menu .item:hover .item__contents {
     display: block;
+
 }
 
 header .main-menu .item .item__contents .contents__menu {
-    background-color: #2C2A29;
+    /* background-color: #2C2A29; */
+    background-color: #272727;
 }
 
 header .main-menu .item .item__contents .contents__menu>ul {
@@ -282,21 +286,24 @@ header .main-menu .item .item__contents .contents__menu>ul>li {
     padding: 10px;
 }
 
+/* 하위 메뉴 제목 */
 header .main-menu .item .item__contents .contents__menu>ul>li h4 {
     padding: 3px 0 12px 0;
-    font-size: 24px;
-    color: #fff;
+    width: 800px;
+    font-size: 36px;
+    color: #808080;
 }
 
+/* 하위 메뉴 텍스트 */
 header .main-menu .item .item__contents .contents__menu>ul>li ul li {
     padding: 5px 0;
-    font-size: 20px;
+    font-size: 18px;
     color: #999;
     cursor: pointer;
 }
 
 header .main-menu .item .item__contents .contents__menu>ul>li ul li:hover {
-    color: #669900;
+    /* color: #669900; */
 }
 
 header .main-menu .item .item__contents .contents__texture {
@@ -335,7 +342,7 @@ header .badges .badge {
 /*VISUAL*/
 .visual {
     margin-top: 120px;
-    background-image: url("../images/visual_main_page.jpg");
+    /* background-image: url("../images/visual_main_page.jpg"); */
     background-position: top;
     background-size: contain;
     opacity: 0.7;
@@ -345,8 +352,65 @@ header .badges .badge {
     background-image: none;
 }
 
+.swiper {
+    width: 100%;
+    height: 650px;
+}
+
+.swiper-wrapper {
+    position: relative;
+
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slideTitle {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    font-size: 56px;
+    color: white;
+    /* background-color: orange; */
+    z-index: 1;
+}
+
+.slideSubTitle {
+    font-size: 30px;
+}
+
+.titleBox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 360px;
+    background-color: #272727;
+    opacity: .3;
+    box-shadow: 2px 2px 2px 2px;
+}
+
 .visual .inner {
-    height: 646px;
+    /* height: 646px; */
 }
 
 .visual .titleBg {
@@ -415,6 +479,74 @@ header .badges .badge {
 
 .visual .fade-in {
     opacity: 0;
+}
+
+.boxMenu {
+    display: flex;
+    justify-content: center;
+}
+
+.box {
+    width: 350px;
+    height: 120px;
+    margin: 30px 10px;
+    position: relative;
+    border: .5px solid #272727;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.box:hover {
+    scale: 1.05;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.box1 {
+    background-image: url(../images/company_bg_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box2 {
+    background-image: url(../images/perfomance_bg_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.box3 {
+    background-image: url(../images/coming_bg_image.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.boxInBox {
+    position: absolute;
+    width: 150px;
+    height: 40px;
+    background-color: white;
+    opacity: .6;
+    left: 0;
+    top: 0;
+    text-align: center;
+    padding-top: 10px;
+    font-size: 16px;
+    color: black;
+}
+
+.box:hover .boxInBox {
+    /* scale: 1.1; */
+    font-weight: bold;
+    transition: all .3s;
+}
+
+.boxInBox span {
+    opacity: 1;
+    font-size: 18px;
+    /* color: black; */
+    /* font-weight: bold; */
 }
 
 
@@ -1155,4 +1287,69 @@ footer .logo {
 
 .coming {
     width: 800px;
+}
+
+.qnaSection {
+    margin-top: 120px;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 100%;
+    /* height: 100%; */
+    /* background-color: red; */
+
+}
+
+.qnaInnerSection {
+    display: flex;
+    flex-direction: column;
+}
+
+.qnaLogoSection {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.qnaLogo {
+    width: 200px;
+}
+
+.qnaComingSection {
+    border-right: 1px solid lightgray;
+    margin-right: 20px;
+}
+
+.comingAddress {
+    margin: 10px;
+}
+
+.qnaComing {
+    width: 450px;
+    height: 450px;
+    margin: 20px;
+}
+
+.qna2nd {
+    display: flex;
+    flex-direction: row;
+    /* align-items: center; */
+    justify-content: center;
+}
+
+.qnaContactsSection {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    margin-left: 20px;
+}
+
+.contacts {
+    margin: 10px;
+}
+
+.subTitle {
+    font-size: 24px;
+    font-weight: bold;
 }
