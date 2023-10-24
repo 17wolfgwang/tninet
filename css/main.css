@@ -1375,3 +1375,15 @@ footer .logo {
 .board_wrap {
     height: 450px;
 }
+
+.data_link {
+    color: black;
+    font-weight: bold;
+    margin: 5px;
+}
+
+.data_link:hover {
+    color: white;
+    background-color: black;
+    font-weight: bold;
+}
